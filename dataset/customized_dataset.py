@@ -60,6 +60,7 @@ class CustomizedDataset(Dataset):
         image, image_scale = self._image_transform(image_path)
         data = {'image_raw': image_raw, 'image': image, 
                 'image_scale': image_scale, 'transitions': self.transitions}
+        return data
 
     def __len__(self):
         return len(self.image_paths)
