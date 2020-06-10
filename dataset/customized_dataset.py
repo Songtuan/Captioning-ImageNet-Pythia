@@ -14,7 +14,7 @@ device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cp
 
 class CustomizedDataset(Dataset):
     def __init__(self, root, transitions):
-        self.transitions = [transition.to(device) for transition in transitions]
+        self.transitions = [transition.to(device) for _, transition in transitions.items()]
         image_files = os.listdir(root)
         self.image_paths = [os.path.join(root, image_file) for image_file in image_files]
     
