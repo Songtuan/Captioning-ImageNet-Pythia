@@ -7,7 +7,7 @@ from pythia.utils.configuration import ConfigNode
 from pythia.tasks.processors import VocabProcessor, CaptionProcessor
 from pythia.models.butd import BUTD
 from pythia.common.registry import registry
-from constrained_beam_search import ConstrainedBeamSearch
+from .constrained_beam_search import ConstrainedBeamSearch
 
 
 config_file = 'model_data/butd.yaml'

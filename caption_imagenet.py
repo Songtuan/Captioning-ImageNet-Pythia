@@ -84,6 +84,4 @@ if __name__ == "__main__":
     save_dir = args.save_dir
     bad_words_dict = ('being')
     proc = CaptionImageNet(root_dir, up_level, save_dir=save_dir, bad_words_dict=bad_words_dict)
-    json_file = 'caption.json'
     proc.run_all()
-    proc.write_to_json(json_file)
